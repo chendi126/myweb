@@ -22,7 +22,7 @@
         "label": "头发数量"
       }
     ],
-    "imageUrl": "http://localhost:3002/uploads/1769775023903-å¾®ä¿¡å¾ç_20260130201002_762_2.jpg"
+    "imageUrl": "/uploads/1769775023903-å¾®ä¿¡å¾ç_20260130201002_762_2.jpg"
   },
   "navbar": {
     "brandPrefix": "ZHU",
@@ -62,7 +62,7 @@
       "title": "经历·Farewell",
       "category": "鸿蒙软件",
       "description": "经历·Farewell旅行记忆应用，以地图经纬度精准记录足迹与多元故事，支持协同记录、分享、时光信箱、一键导航等功能，定格旅行珍贵回忆。\n\n荣获2025鸿蒙创新赛校园星火奖",
-      "imageUrl": "http://localhost:3002/uploads/1769774435832-ç»å3.png",
+      "imageUrl": "/uploads/1769774435832-ç»å3.png",
       "caseStudyUrl": "https://developer.huawei.com/consumer/cn/activity/digixActivity/digixcmsdetail/digixWinnersDetail/101750143863263087",
       "year": "2025",
       "tags": [
@@ -74,7 +74,7 @@
       "title": "超级剪切板",
       "category": "Flutter",
       "description": "一款支持云端同步的智能剪贴板管理应用。AI分析文本内容，智能生成提示词。取件码、验证码直接提取、网页一键打开等等",
-      "imageUrl": "http://localhost:3002/uploads/1769772077075-è¶çº§åªåæ¿.png",
+      "imageUrl": "/uploads/1769772077075-è¶çº§åªåæ¿.png",
       "caseStudyUrl": "https://www.xiaohongshu.com/discovery/item/6936c81b000000001e00515f?source=webshare&xhsshare=pc_web&xsec_token=AB0EFmr9Rbqh_xnKi6MS96gA_KfXJEe6kd1_-UFZMIybk=&xsec_source=pc_share",
       "year": "2025",
       "tags": [
@@ -86,7 +86,7 @@
       "title": "智慧药盒",
       "category": "嵌入式",
       "description": "基于Hi3861V100的多功能智慧药盒定时提醒系统。手机app控制药盒状态，实时监测提示用户吃药状况，全自主的外壳设计。",
-      "imageUrl": "http://localhost:3002/uploads/1769774471094-IMG_20250630_011042.jpg",
+      "imageUrl": "/uploads/1769774471094-IMG_20250630_011042.jpg",
       "caseStudyUrl": "",
       "year": "2025",
       "tags": [
@@ -98,7 +98,7 @@
       "title": "一些随手的项目",
       "category": "软件app",
       "description": "已上架鸿蒙应用市场的随机选择与记账软件——吃了吗；正在完善的鸿蒙版超级剪切板；基于flutte的专注软件",
-      "imageUrl": "http://localhost:3002/uploads/1769774879915-ä¸åä¸.png",
+      "imageUrl": "/uploads/1769774879915-ä¸åä¸.png",
       "caseStudyUrl": "https://github.com/chendi126/supercopyboard",
       "year": "2025",
       "tags": [
@@ -110,7 +110,7 @@
       "title": "AdventureX",
       "category": "黑客松",
       "description": "AdventureX Kimi vibe coding赛道三等奖",
-      "imageUrl": "http://localhost:3002/uploads/1769778808758-é»å®¢æ¾_bw_glass.png",
+      "imageUrl": "/uploads/1769778808758-é»å®¢æ¾_bw_glass.png",
       "caseStudyUrl": "https://www.xiaohongshu.com/discovery/item/68850a2e0000000015023b5d?source=webshare&xhsshare=pc_web&xsec_token=ABg0iIoMUNA57oae4jKikEr8jd1kd71oc7FMNhYpMlfq0=&xsec_source=pc_share",
       "year": "2025",
       "tags": [
