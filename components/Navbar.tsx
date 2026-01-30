@@ -2,8 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { NAV_LINKS } from '../constants';
 import { SectionId } from '../types';
+import { useData } from '../context/DataContext';
 
 const Navbar: React.FC = () => {
+  const { data } = useData();
+  const navbar = data?.navbar;
+  const navLinks = navbar?.navLinks || NAV_LINKS;
+  const brandPrefix = navbar?.brandPrefix || 'LIU';
+  const brandSuffix = navbar?.brandSuffix || 'ENG';
+  const contactButtonText = navbar?.contactButtonText || '联系我';
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -41,12 +48,12 @@ const Navbar: React.FC = () => {
             className="text-xl font-black tracking-tighter cursor-pointer text-text-primary hover:text-accent transition-colors select-none"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           >
-            LIU<span className="text-accent">.</span>ENG
+            {brandPrefix}<span className="text-accent">.</span>{brandSuffix}
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}
@@ -64,7 +71,7 @@ const Navbar: React.FC = () => {
                onClick={() => scrollToSection(SectionId.CONTACT)}
                className="bg-text-primary text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-accent transition-colors"
              >
-               HIRE ME
+               {contactButtonText}
              </button>
           </div>
 
@@ -81,7 +88,7 @@ const Navbar: React.FC = () => {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-40 bg-white/90 backdrop-blur-xl flex items-center justify-center animate-fade-in md:hidden">
           <div className="flex flex-col items-center gap-8">
-            {NAV_LINKS.map((link) => (
+            {navLinks.map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollToSection(link.id)}

@@ -1,11 +1,16 @@
 import React from 'react';
 import { ArrowUpRight, Cpu, Terminal } from 'lucide-react';
-import { PROJECTS } from '../constants';
+import { PROJECTS as DEFAULT_PROJECTS } from '../constants';
 import { SectionId } from '../types';
+import { useData } from '../context/DataContext';
 
 const Portfolio: React.FC = () => {
+  const { data } = useData();
+  const projects = data?.projects || DEFAULT_PROJECTS;
+  const defaultCaseStudyUrl = 'https://www.bilibili.com/';
+
   return (
-    <section id={SectionId.WORK} className="py-32 relative">
+    <section id={SectionId.WORK} className="py-32 relative snap-start scroll-mt-28 md:scroll-mt-32">
       {/* Background Tech Elements */}
       <div className="absolute right-0 top-20 opacity-10 pointer-events-none">
         <svg width="400" height="400" viewBox="0 0 100 100">
@@ -18,21 +23,21 @@ const Portfolio: React.FC = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-24">
           <div>
-            <span className="font-mono text-accent text-sm tracking-widest uppercase mb-2 block">Selected Works</span>
+            <span className="font-mono text-accent text-sm tracking-widest uppercase mb-2 block">精选作品</span>
              <h2 className="text-4xl md:text-6xl font-sans font-black text-text-primary tracking-tight">
               工程实验室
             </h2>
           </div>
           <div className="hidden md:block">
             <div className="font-mono text-xs text-text-secondary text-right">
-              <p>RENDERING: HIGH_FIDELITY</p>
-              <p>REFRACTION: ENABLED</p>
+              <p>渲染：高保真</p>
+              <p>折射：已启用</p>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col gap-32">
-          {PROJECTS.map((project, index) => {
+          {projects.map((project, index) => {
             const isEven = index % 2 === 0;
             // Even (0, 2): Image Left (Order 1), Text Right (Order 2)
             // Odd (1, 3): Text Left (Order 1), Image Right (Order 2)
@@ -54,7 +59,7 @@ const Portfolio: React.FC = () => {
                   
                   {/* Overlay Tech Specs */}
                   <div className="absolute bottom-6 left-6 font-mono text-xs text-white/90 bg-black/40 backdrop-blur-md px-3 py-1 rounded border border-white/20">
-                    ID: {project.id.padStart(3, '0')} // RES: 4K
+                    编号: {project.id.padStart(3, '0')} // 分辨率: 4K
                   </div>
                 </div>
 
@@ -92,9 +97,14 @@ const Portfolio: React.FC = () => {
                      </div>
 
                      <div className="flex items-center gap-4">
-                        <button className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-text-primary border-b-2 border-text-primary pb-1 hover:text-accent hover:border-accent transition-all">
-                          View Case Study <ArrowUpRight size={16} />
-                        </button>
+                        <a
+                          href={project.caseStudyUrl || defaultCaseStudyUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-text-primary border-b-2 border-text-primary pb-1 hover:text-accent hover:border-accent transition-all"
+                        >
+                          查看案例 <ArrowUpRight size={16} />
+                        </a>
                      </div>
                   </div>
                 </div>

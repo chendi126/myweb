@@ -1,24 +1,28 @@
 import React from 'react';
-import { EXPERIENCES } from '../constants';
+import { EXPERIENCES as DEFAULT_EXPERIENCES } from '../constants';
 import { SectionId } from '../types';
-import { GitCommit, Radio } from 'lucide-react';
+import { Radio } from 'lucide-react';
+import { useData } from '../context/DataContext';
 
 const Experience: React.FC = () => {
+  const { data } = useData();
+  const experiences = data?.experiences || DEFAULT_EXPERIENCES;
+
   return (
-    <section id={SectionId.EXPERIENCE} className="py-32 relative overflow-hidden">
+    <section id={SectionId.EXPERIENCE} className="py-32 relative overflow-hidden snap-start scroll-mt-28 md:scroll-mt-32">
       <div className="container mx-auto px-6 max-w-5xl relative z-10">
         
         {/* Header */}
         <div className="flex flex-col items-center mb-24 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100/50 border border-blue-200 text-blue-700 text-xs font-mono mb-4">
                 <Radio size={14} className="animate-pulse" />
-                <span>SIGNAL_TRACING</span>
+                <span>信号追踪</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-sans font-black text-text-primary mb-4">
               职业轨迹
             </h2>
             <p className="text-text-secondary font-mono text-sm max-w-md">
-              &gt;&gt; Initiating chronological sequence trace...<br/>
+              &gt;&gt; 正在初始化时间序列追踪...<br/>
               &gt;&gt; /var/log/career_history
             </p>
         </div>
@@ -30,7 +34,7 @@ const Experience: React.FC = () => {
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-blue-400 via-purple-400 to-transparent md:-translate-x-1/2 opacity-30"></div>
 
           <div className="space-y-20">
-            {EXPERIENCES.map((exp, index) => {
+            {experiences.map((exp, index) => {
                const isEven = index % 2 === 0;
                return (
                 <div key={exp.id} className={`flex flex-col md:flex-row gap-8 md:gap-0 items-center relative ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'}`}>

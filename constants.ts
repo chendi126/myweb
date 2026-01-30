@@ -14,6 +14,7 @@ export const PROJECTS: Project[] = [
     category: 'IoT / 嵌入式开发',
     description: '基于 ESP32 与 Zigbee 协议的家庭自动化网关，自主设计的 PCB 与 3D 打印外壳。',
     imageUrl: 'https://picsum.photos/800/600?random=10',
+    caseStudyUrl: 'https://www.bilibili.com/',
     year: '2024',
     tags: ['C++', 'PCB Design', 'MQTT', 'React Native'],
   },
@@ -23,6 +24,7 @@ export const PROJECTS: Project[] = [
     category: '后端架构 / K8s',
     description: '高并发微服务系统，支持实时数据流处理，服务于工业监控场景。',
     imageUrl: 'https://picsum.photos/800/800?random=11',
+    caseStudyUrl: 'https://www.bilibili.com/',
     year: '2023',
     tags: ['Go', 'Kubernetes', 'gRPC', 'TimescaleDB'],
   },
@@ -32,6 +34,7 @@ export const PROJECTS: Project[] = [
     category: '硬件加速 / Verilog',
     description: '利用 FPGA 进行边缘计算图像预处理，显著降低了后端传输带宽。',
     imageUrl: 'https://picsum.photos/600/800?random=12',
+    caseStudyUrl: 'https://www.bilibili.com/',
     year: '2022',
     tags: ['Verilog', 'Xilinx', 'Computer Vision'],
   },
@@ -41,6 +44,7 @@ export const PROJECTS: Project[] = [
     category: '全栈开发',
     description: '极简风格的数据可视化平台，为硬件设备提供远程管理界面。',
     imageUrl: 'https://picsum.photos/800/500?random=13',
+    caseStudyUrl: 'https://www.bilibili.com/',
     year: '2023',
     tags: ['Next.js', 'TypeScript', 'D3.js', 'PostgreSQL'],
   },
@@ -71,8 +75,8 @@ export const EXPERIENCES: Experience[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-  { name: 'GitHub', url: '#', icon: 'github' },
-  { name: 'StackOverflow', url: '#', icon: 'stackoverflow' },
-  { name: 'LinkedIn', url: '#', icon: 'linkedin' },
-  { name: 'Bilibili', url: '#', icon: 'bilibili' },
+  { name: 'GitHub', url: '#', icon: 'github.svg' },
+  { name: '小红书', url: '#', icon: 'redbook.svg' },
+  { name: '微信', url: '#', icon: 'weichat.svg' },
+  { name: '哔哩哔哩', url: '#', icon: 'bilibili-line.svg' },
 ];

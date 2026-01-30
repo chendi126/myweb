@@ -4,14 +4,20 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"vite\" \"node server/server.cjs\"",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "body-parser": "^2.2.2",
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "lucide-react": "^0.562.0",
+    "multer": "^2.0.2",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "lucide-react": "^0.562.0"
+    "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
